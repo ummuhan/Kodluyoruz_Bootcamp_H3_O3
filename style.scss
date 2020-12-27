@@ -1,0 +1,68 @@
+:root{
+    --textfont:'Roboto',sans-serif;
+
+    --baslikfont:'Red Hat Display', sans-serif;
+};
+
+$c_button:#FB4C47;
+
+*{
+    margin: auto;
+    font-family: var(--textfont);
+}
+
+
+.container{
+    padding-top: 31px;
+    display: flex;
+    justify-content: space-between;
+ 
+
+    .nav{
+     position: relative;
+     margin-top: 21px;
+
+
+       &__items{
+        text-decoration: none;
+        padding-right: 10px;
+       
+        &:hover{
+            color:$c_button;
+        }
+       
+
+    }
+ 
+        
+    }
+}
+
+
+.nav{
+   a.active{
+    color: red;
+    
+    &::after{
+        bottom: -9px;
+        position: absolute;
+        content: '';
+        display: inline-block;
+        border-radius: 100%;
+        background-color: $c_button;
+        width: 8px;
+        height: 8px;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+   }
+}
+button{
+ color: $c_button;
+ border-radius: 65px;
+ border: 1px solid $c_button;
+ padding:16px 35px;
+ background-color: #fff;
+}
+
