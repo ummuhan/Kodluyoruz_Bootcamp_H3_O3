@@ -1,68 +1,165 @@
 :root{
-    --textfont:'Roboto',sans-serif;
-
-    --baslikfont:'Red Hat Display', sans-serif;
+    --t_font:'Roboto',sans-serif;
+    --b_font:'Red Hat Display', sans-serif;
 };
-
+$t_font-weight:400px;
+$t_font-size:24px;
 $c_button:#FB4C47;
+$c_text:#4B4F51;
+$b_font-weight:700px;
+$b_font-size:32px;
+$c_baslik: #035755;
+$c_renkli_baslik: #FA5652;
 
 *{
-    margin: auto;
-    font-family: var(--textfont);
+    color: $c_text;
+    font-family: var(--t_font);
 }
 
-
-.container{
-    padding-top: 31px;
-    display: flex;
-    justify-content: space-between;
- 
-
-    .nav{
-     position: relative;
-     margin-top: 21px;
-
-
-       &__items{
-        text-decoration: none;
-        padding-right: 10px;
-       
-        &:hover{
-            color:$c_button;
-        }
-       
-
-    }
- 
-        
-    }
+.header{
+    padding-top: 15px;
 }
 
+.logo{
+    margin: 0;
+    padding:0;
+}
 
-.nav{
-   a.active{
-    color: red;
+.wrap{
+    text-align: center;
     
-    &::after{
-        bottom: -9px;
-        position: absolute;
-        content: '';
-        display: inline-block;
-        border-radius: 100%;
-        background-color: $c_button;
-        width: 8px;
-        height: 8px;
-        margin: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        }
+    &__nav{
+    font-size: 15px;
+
+    a.active{
+        color: red;
+        position: relative;
+       }
    }
-}
-button{
- color: $c_button;
- border-radius: 65px;
- border: 1px solid $c_button;
- padding:16px 35px;
- background-color: #fff;
+   &__items{
+    text-decoration: none;
+    margin-right: 10px;
+   
+    &:hover{
+        color:$c_button;
+    }
 }
 
+   &__button{
+    color: $c_button;
+    border-radius: 65px;
+    border: 1px solid $c_button;
+    padding:10px 10px;
+    background-color: #fff;
+    margin: 11px;
+   }  
+}
+
+//    .section{
+
+//     &__text{
+//         position: relative;
+//     }
+ 
+//     &__images{
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         margin-left: 50px;
+
+//         img{
+//             width: 500px;
+//         }
+
+//     }
+
+
+//     &__p{
+//         font-weight: $t_font-weight;
+//         font-size: $t_font-size;
+//         font-family: var(--t_font);
+//         line-height: 45.6px;
+//         color: $c_text;
+//         width: 500px;
+//     }
+
+//     &__h1{
+//         font-weight: $b_font-weight;
+//         font-size: $b_font-size;
+//         color: $c_baslik;
+//         width: 500px;
+//     }
+
+//     &__h3{
+//         color: $c_renkli_baslik;
+//     }
+// }
+ @media  screen and (min-width: 768px){
+    .header{
+        padding-top: 52px;
+    }
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+
+        &__nav{
+            font-size: 15px;
+
+            a.active{
+                   
+                &::after{
+                    bottom: -9px;
+                    content: '';
+                    display: inline-block;
+                    border-radius: 100%;
+                    background-color: $c_button;
+                    width: 6px;
+                    height: 6px;
+                    margin: auto;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    position: absolute;
+                    }
+               }
+            }
+
+            &__button{
+                padding:16px 45px;
+                margin: 20px;
+               }
+    }
+    
+ }
+ @media  screen and (min-width:1200px){
+    .header{
+        padding-top: 70px;
+    }
+    .wrap{
+
+        &__nav{
+            font-size: 20px;
+
+            a.active{
+                   
+                &::after{
+                    bottom: -18px;
+                    width: 10px;
+                    height: 10px;
+                    left: 50%;
+                    }
+               }
+            }
+
+            &__button{
+                font-size: 20px;
+                padding:16px 45px;
+                margin: 20px;
+
+                &:hover{
+                    background-color:$c_button;
+                    color: white;
+                }
+               }
+    }
+    
+ }

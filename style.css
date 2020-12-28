@@ -1,61 +1,109 @@
 :root {
-  --textfont:'Roboto',sans-serif;
-  --baslikfont:'Red Hat Display', sans-serif;
+  --t_font:'Roboto',sans-serif;
+  --b_font:'Red Hat Display', sans-serif;
 }
 
 * {
-  margin: auto;
-  font-family: var(--textfont);
+  color: #4B4F51;
+  font-family: var(--t_font);
 }
 
-.container {
-  padding-top: 31px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.header {
+  padding-top: 15px;
 }
 
-.container .nav {
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  text-align: center;
+}
+
+.wrap__nav {
+  font-size: 15px;
+}
+
+.wrap__nav a.active {
+  color: red;
   position: relative;
-  margin-top: 21px;
 }
 
-.container .nav__items {
+.wrap__items {
   text-decoration: none;
-  padding-right: 10px;
+  margin-right: 10px;
 }
 
-.container .nav__items:hover {
+.wrap__items:hover {
   color: #FB4C47;
 }
 
-.nav a.active {
-  color: red;
-}
-
-.nav a.active::after {
-  bottom: -9px;
-  position: absolute;
-  content: '';
-  display: inline-block;
-  border-radius: 100%;
-  background-color: #FB4C47;
-  width: 8px;
-  height: 8px;
-  margin: auto;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-button {
+.wrap__button {
   color: #FB4C47;
   border-radius: 65px;
   border: 1px solid #FB4C47;
-  padding: 16px 35px;
+  padding: 10px 10px;
   background-color: #fff;
+  margin: 11px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding-top: 52px;
+  }
+  .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .wrap__nav {
+    font-size: 15px;
+  }
+  .wrap__nav a.active::after {
+    bottom: -9px;
+    content: '';
+    display: inline-block;
+    border-radius: 100%;
+    background-color: #FB4C47;
+    width: 6px;
+    height: 6px;
+    margin: auto;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    position: absolute;
+  }
+  .wrap__button {
+    padding: 16px 45px;
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding-top: 70px;
+  }
+  .wrap__nav {
+    font-size: 20px;
+  }
+  .wrap__nav a.active::after {
+    bottom: -18px;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+  }
+  .wrap__button {
+    font-size: 20px;
+    padding: 16px 45px;
+    margin: 20px;
+  }
+  .wrap__button:hover {
+    background-color: #FB4C47;
+    color: white;
+  }
 }
 /*# sourceMappingURL=style.css.map */
