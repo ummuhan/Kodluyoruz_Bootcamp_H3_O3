@@ -14,14 +14,17 @@ $c_renkli_baslik: #FA5652;
 *{
     color: $c_text;
     font-family: var(--t_font);
-    box-sizing: content-box;
+    margin: 0;
+    padding:0;
+   
 }
 
 .header{
-    padding-top: 15px;
-    padding-bottom: 15px;
- 
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin:0px;
 }
+
 
 .logo{
     margin: 0;
@@ -29,9 +32,11 @@ $c_renkli_baslik: #FA5652;
 }
 
 .wrap{
+  
     text-align: center;
     
     &__nav{
+    margin-top: 25px;
     font-size: 15px;
 
     a.active{
@@ -42,11 +47,14 @@ $c_renkli_baslik: #FA5652;
    &__items{
     text-decoration: none;
     margin-right: 10px;
+    margin-bottom: 10px;
    
 
     &:hover{
         color:$c_button;
     }
+    
+    
 }
 
    &__button{
@@ -72,6 +80,7 @@ $c_renkli_baslik: #FA5652;
 }
 
 .first-wrap{
+   margin-top: 20px;
 
     &__h3{
         font-size:20px;
@@ -85,6 +94,7 @@ $c_renkli_baslik: #FA5652;
         color: $c_baslik;
         width: 500px;
         line-height: 48px;
+        margin-bottom: 15;
 
     }
 
@@ -94,11 +104,13 @@ $c_renkli_baslik: #FA5652;
          line-height: 29.6px;
          color: $c_text;
          width: 500px;
+         margin-bottom: 25px;
     }
 
     &__button{
        width: 80px;
        font-weight: 400px;
+       font-size: 15px;
         background-color: #FB4C47;
         color: white;
         border: 4px solid $c_button;
@@ -112,8 +124,7 @@ $c_renkli_baslik: #FA5652;
      width: 400px;
    }
    .text{
-      
-       margin-bottom: 30px;
+     margin-bottom: 30px;
    }
    
 
@@ -121,9 +132,7 @@ $c_renkli_baslik: #FA5652;
 
 
 @media  screen and (min-width: 768px){
-    .header{
-        padding-top: 26px;
-    }
+    
     .wrap{
         display: flex;
         justify-content: space-between;
@@ -132,9 +141,10 @@ $c_renkli_baslik: #FA5652;
             font-size: 15px;
 
             a.active{
-                   
+                   position: relative;
                 &::after{
                     content: '';
+                     position: absolute;
                     bottom: -9px;
                     display: inline-block;
                     border-radius: 100%;
@@ -144,7 +154,7 @@ $c_renkli_baslik: #FA5652;
                     margin: auto;
                     left: 50%;
                     transform: translateX(-50%);
-                    position: absolute;
+                   
                     }
                }
             }
@@ -159,6 +169,62 @@ $c_renkli_baslik: #FA5652;
                     
                 }
                }
+    }
+
+    .first-wrap{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        &__h3{
+            font-size:20px;
+            color: $c_renkli_baslik;
+            
+        }
+    
+        &__h1{
+            font-weight: $b_font-weight;
+            font-size:35px;
+            color: $c_baslik;
+            width: 500px;
+            line-height: 48px;
+            margin-bottom: 15;
+    
+        }
+    
+        &__p{
+             font-weight: 400px;
+             font-size: 20px;
+             line-height: 29.6px;
+             color: $c_text;
+             width: 500px;
+             margin-bottom: 25px;
+        }
+    
+        &__button{
+           width: 80px;
+           font-weight: 400px;
+           font-size: 15px;
+            background-color: #FB4C47;
+            color: white;
+            border: 4px solid $c_button;
+            border: none;
+            &:hover{
+                
+                border: 4px solid $c_button;
+            }
+        }
+
+        img{
+            width: 600px;
+        }
+       
+       .text{
+          margin-top: 50px;
+          margin-bottom: 30px;
+       }
+    
+    
     }
     
 
@@ -175,7 +241,7 @@ $c_renkli_baslik: #FA5652;
             a.active{
                    
                 &::after{
-                    bottom: -18px;
+                    
                     width: 10px;
                     height: 10px;
                     left: 50%;
