@@ -64,6 +64,7 @@
   margin: 11px;
   padding: 4px 10px;
   text-decoration: none;
+  padding: 10px 10px;
 }
 
 .h1 {
@@ -155,6 +156,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .button {
+    padding: 10px 25px;
+  }
   .wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -244,6 +248,7 @@
     width: 80px;
     font-weight: 400px;
     font-size: 15px;
+    padding: 15px;
     background-color: #FB4C47;
     color: white;
     border: 4px solid #FB4C47;
@@ -276,11 +281,22 @@
     margin-top: 100px;
     margin-bottom: 30px;
   }
+  .second-wrap__button {
+    width: 100px;
+    font-weight: 500px;
+    font-size: 15px;
+    border: none;
+    padding: 15px;
+  }
+  .second-wrap__button:hover {
+    border: 4px solid #FB4C47;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .header {
     padding-top: 32px;
+    margin-bottom: 50px;
   }
   .wrap__nav {
     font-size: 20px;
@@ -307,8 +323,14 @@
     /* Safari 3-8 */
     transform: scale(1.1);
   }
+  .first-wrap img {
+    width: 600px;
+  }
   .second-wrap img {
     width: 500px;
+  }
+  .second-wrap .text {
+    margin-left: 70px;
   }
 }
 /*# sourceMappingURL=style.css.map */
