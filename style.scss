@@ -78,6 +78,26 @@ $c_renkli_baslik: #FA5652;
     padding:4px 10px;
     text-decoration: none;
 }
+.h1{
+    font-weight: $b_font-weight;
+    font-size:35px;
+    color: $c_baslik;
+    width: 500px;
+    line-height: 48px;
+    margin-bottom: 15;
+}
+.h3{
+    font-size:20px;
+        color: $c_renkli_baslik;
+}
+.p{
+    font-weight: 400px;
+    font-size: 20px;
+    line-height: 29.6px;
+    color: $c_text;
+    width: 500px;
+    margin-bottom: 25px;
+}
 
 .first-wrap{
    margin-top: 20px;
@@ -130,6 +150,26 @@ $c_renkli_baslik: #FA5652;
 
 }
 
+.second-wrap{
+   &__button{
+       background-color: rgba(250, 86, 82, 0.15);
+       color: #FA5652;
+       border: none;
+       font-weight: 400px;
+       width: 80px;
+       &:hover{
+            background-color: rgba(247, 57, 54, 0.15);
+    }
+   }
+
+   img{
+       width: 400px;
+   }
+
+   
+}
+
+
 
 @media  screen and (min-width: 768px){
     
@@ -170,6 +210,29 @@ $c_renkli_baslik: #FA5652;
                 }
                }
     }
+    .h3{
+        font-size:20px;
+        color: $c_renkli_baslik;
+    }
+
+    .h1{
+        font-weight: $b_font-weight;
+        font-size:35px;
+        color: $c_baslik;
+        width: 500px;
+        line-height: 48px;
+        margin-bottom: 15;
+    }
+
+    .p{
+        font-weight: 400px;
+         font-size: 20px;
+         line-height: 29.6px;
+         color: $c_text;
+         width: 500px;
+         margin-bottom: 25px;
+    }
+    
 
     .first-wrap{
         margin-top: 30px;
@@ -216,7 +279,7 @@ $c_renkli_baslik: #FA5652;
         }
 
         img{
-            width: 600px;
+            width: 400px;
         }
        
        .text{
@@ -225,6 +288,22 @@ $c_renkli_baslik: #FA5652;
        }
     
     
+    }
+
+    .second-wrap{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: 400px;
+            margin-left: -80px;
+        }
+
+        .text{
+            margin-top: 100px;
+            margin-bottom: 30px;
+         }
     }
     
 
@@ -263,6 +342,12 @@ $c_renkli_baslik: #FA5652;
                     transform: scale(1.1); 
                 }
 
+        }
+    }
+
+    .second-wrap{
+        img{
+            width: 500px;
         }
     }
 
