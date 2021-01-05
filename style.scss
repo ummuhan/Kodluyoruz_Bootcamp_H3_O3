@@ -84,7 +84,7 @@ $c_renkli_baslik: #FA5652;
     font-size:35px;
     color: $c_baslik;
     width: 500px;
-    line-height: 48px;
+    // line-height: 48px;
     margin-bottom: 15;
 }
 .h3{
@@ -152,6 +152,7 @@ $c_renkli_baslik: #FA5652;
 }
 
 .second-wrap{
+    margin-bottom: 40px;
    &__button{
        background-color: rgba(250, 86, 82, 0.15);
        color: #FA5652;
@@ -168,6 +169,52 @@ $c_renkli_baslik: #FA5652;
    }
 
    
+}
+
+.third-wrap{
+
+    margin: 10px;
+   
+    &__cards{
+        border: 1px solid rgba(93, 39, 38, 0.15);
+        margin-bottom: 15px;
+        text-align: center;
+        &:hover{
+            background-color:  rgba(165, 73, 71, 0.15);
+        }
+    }
+
+  img{
+      width: 200px;
+  }
+
+  &__text{
+      margin:10px;
+      
+  }
+  &__p{
+      margin-top: 10px;
+      width: 450px;
+      
+  }
+
+
+}
+
+.fourth-wrap{
+    margin-top: 20px;
+    text-align: center;
+    
+    &__h1{
+     font-weight: 700px;
+     margin-inline-end: 0px;
+    }
+
+  
+
+    img{
+        width: 450px;
+    }
 }
 
 
@@ -323,7 +370,39 @@ $c_renkli_baslik: #FA5652;
              }
          }
     }
+
+    .third-wrap{ 
+      
+        display: flex;
+        justify-content: space-between;
+
+        img{
+            width: 250px;
+        }
+        &__p{
+            width: 250px;
+        }
+
+    }
+
+    .fourth-wrap{
+        margin-top: 20px;
+        text-align: center;
+      
+        &__h1{
+         font-weight: 700px;
+        //  line-height: ;
+        }
     
+        &__p{
+           width: 700px;
+           font-size: 18px
+        }
+    
+        img{
+            width: 700px;
+        }
+    }
 
  }
  @media  screen and (min-width:992px){
@@ -379,6 +458,30 @@ $c_renkli_baslik: #FA5652;
         .text{
             margin-left: 70px;
         }
+    }
+    .third-wrap{ 
+        margin-right: 30px;
+        
+        &:last-of-type{
+            margin: none;
+        }
+        display: flex;
+        justify-content: space-between;
+
+        &__cards{
+            border: none;
+            border-bottom: 3px solid transparent;
+            &:hover{
+                border-bottom: 3px solid red;
+            }
+        }
+        img{
+            width: 300px;
+        }
+        &__p{
+            width: 300px;
+        }
+
     }
 
  }
