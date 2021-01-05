@@ -16,6 +16,8 @@ $c_renkli_baslik: #FA5652;
     font-family: var(--t_font);
     margin: 0;
     padding:0;
+    background-color: #FFFAFA;
+    box-sizing: content-box;
    
 }
 
@@ -79,54 +81,37 @@ $c_renkli_baslik: #FA5652;
     text-decoration: none;
     padding:10px 10px;
 }
+
+.h3{
+    font-size:15px;
+    color: $c_renkli_baslik;
+    text-transform: capitalize;
+    
+}
+
 .h1{
     font-weight: $b_font-weight;
-    font-size:35px;
+    font-size:25px;
     color: $c_baslik;
-    width: 500px;
-    // line-height: 48px;
-    margin-bottom: 15;
+    width: 400px;
+    line-height: 40px;  
+    margin-bottom: 8px;
+    text-transform: capitalize;
+
 }
-.h3{
-    font-size:20px;
-        color: $c_renkli_baslik;
-}
+
 .p{
-    font-weight: 400px;
-    font-size: 20px;
-    line-height: 29.6px;
-    color: $c_text;
-    width: 500px;
-    margin-bottom: 25px;
+     font-weight: 400px;
+     font-size: 15px;
+     line-height: 29.6px;
+     color: $c_text;
+     width: 400px;
+     margin-bottom: 25px;
+     text-transform: capitalize;
 }
 
 .first-wrap{
    margin-top: 20px;
-
-    &__h3{
-        font-size:20px;
-        color: $c_renkli_baslik;
-        
-    }
-
-    &__h1{
-        font-weight: $b_font-weight;
-        font-size:35px;
-        color: $c_baslik;
-        width: 500px;
-        line-height: 48px;
-        margin-bottom: 15;
-
-    }
-
-    &__p{
-         font-weight: 400px;
-         font-size: 20px;
-         line-height: 29.6px;
-         color: $c_text;
-         width: 500px;
-         margin-bottom: 25px;
-    }
 
     &__button{
        width: 80px;
@@ -171,12 +156,18 @@ $c_renkli_baslik: #FA5652;
    
 }
 
-.third-wrap{
+.subtitle{
+    margin: auto;
+    text-align: center;
+}
 
-    margin: 10px;
+.third-wrap{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
    
     &__cards{
-        border: 1px solid rgba(93, 39, 38, 0.15);
+    
         margin-bottom: 15px;
         text-align: center;
         &:hover{
@@ -189,12 +180,13 @@ $c_renkli_baslik: #FA5652;
   }
 
   &__text{
-      margin:10px;
+      margin: auto;
+      
       
   }
   &__p{
-      margin-top: 10px;
-      width: 450px;
+    margin: auto;
+     width: 300px;
       
   }
 
@@ -202,21 +194,105 @@ $c_renkli_baslik: #FA5652;
 }
 
 .fourth-wrap{
-    margin-top: 20px;
+    margin: auto;
     text-align: center;
+
     
     &__h1{
-     font-weight: 700px;
      margin-inline-end: 0px;
     }
-
-  
+    &__p{
+        margin: auto;
+    }
 
     img{
         width: 450px;
     }
 }
 
+.fifth-text{
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fifth-wrap{
+    margin: auto;
+    text-align: center;
+    
+    .siralama{
+        text-align: start;
+        display: flex;
+        justify-content: space-between; 
+    }
+  &__step{
+      width: 50px;
+  }
+  .text{
+      padding-top: 10px;
+  }
+  &__h1{
+      width: 200px;
+  }
+  &__p{
+    
+      margin: auto;
+  }
+  &__images{
+     
+      width: 300px;
+  }
+
+}
+
+.search-wrap{
+    text-align: center;
+    &__h1{
+        margin: auto;
+        text-align: center;
+        width: 400px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 50px;
+    color: #0C6C44;
+    margin-bottom: 30px;
+    }
+
+    &__input{    
+   
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+    padding: 20px 90px;
+    margin-bottom: 100px;
+    border-inline: none;
+
+    &::placeholder{
+        text-align: start;
+    color: #035755;
+    }
+    &::after{
+    content: "";
+    color: red;
+    }
+    }
+  
+}
+
+.footer-wrap{
+    text-align: center;
+    &__link{
+        width: 15px;
+        height: 15px;
+        margin: 30px 10px;
+        :last-of-type{
+            margin-right: none;
+        }
+    }
+ 
+}
 
 
 @media  screen and (min-width: 768px){
@@ -272,8 +348,8 @@ $c_renkli_baslik: #FA5652;
         font-size:35px;
         color: $c_baslik;
         width: 500px;
-        line-height: 48px;
         margin-bottom: 15;
+      
     }
 
     .p{
@@ -403,6 +479,31 @@ $c_renkli_baslik: #FA5652;
             width: 700px;
         }
     }
+    .ters-duz{
+        :nth-last-of-type(even){
+          flex-wrap: wrap-reverse;
+        }
+    }
+
+    .fifth-wrap{
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        .siralama{
+            margin-right: 150px;
+        }
+
+        &__p{
+           margin: 0%;
+            width: 450px;
+            font-size: 14px;
+            line-height: 221%;
+        }
+
+        &__images{
+            margin-top: -70px;
+        }
+    }
 
  }
  @media  screen and (min-width:992px){
@@ -459,6 +560,18 @@ $c_renkli_baslik: #FA5652;
             margin-left: 70px;
         }
     }
+
+    .subtitle{
+        margin: auto;
+        text-align: center; 
+        margin-bottom: 20px;  
+       &__p{
+        width: 500px;
+        margin: auto;
+        text-transform: capitalize;
+       }
+     }
+
     .third-wrap{ 
         margin-right: 30px;
         
@@ -479,6 +592,7 @@ $c_renkli_baslik: #FA5652;
             width: 300px;
         }
         &__p{
+            margin: auto;
             width: 300px;
         }
 
