@@ -227,6 +227,7 @@
 }
 
 .fifth-wrap__p {
+  width: 300px;
   margin: auto;
 }
 
@@ -290,10 +291,16 @@
   text-align: center;
 }
 
+.footer-wrap__nav {
+  margin-top: 25px;
+  font-size: 15px;
+}
+
 .footer-wrap__link {
-  width: 15px;
-  height: 15px;
-  margin: 30px 10px;
+  width: 10px;
+  height: 10px;
+  margin-top: 30px;
+  margin-right: 10px;
 }
 
 .footer-wrap__link :last-of-type {
@@ -487,6 +494,14 @@
   }
   .fifth-wrap__images {
     margin-top: -70px;
+  }
+  .footer-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 

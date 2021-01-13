@@ -25,6 +25,7 @@ $c_renkli_baslik: #FA5652;
     margin-top: 15px;
     margin-bottom: 15px;
     margin:0px;
+   
 }
 
 
@@ -215,10 +216,19 @@ $c_renkli_baslik: #FA5652;
     text-align: center;
     margin-bottom: 20px;
 }
+.ters-duz{
+   .fifth-wrap{
+    
+   }
+}
+
 
 .fifth-wrap{
     margin: auto;
     text-align: center;
+   
+    
+   
     
     .siralama{
         text-align: start;
@@ -230,12 +240,13 @@ $c_renkli_baslik: #FA5652;
   }
   .text{
       padding-top: 10px;
+     
   }
   &__h1{
       width: 200px;
   }
   &__p{
-    
+    width: 300px;
       margin: auto;
   }
   &__images{
@@ -283,13 +294,20 @@ $c_renkli_baslik: #FA5652;
 
 .footer-wrap{
     text-align: center;
+    &__nav{
+        margin-top: 25px;
+        font-size: 15px;
+    }
     &__link{
-        width: 15px;
-        height: 15px;
-        margin: 30px 10px;
-        :last-of-type{
-            margin-right: none;
-        }
+        width: 10px;
+        height: 10px;
+        margin-top: 30px;
+        margin-right: 10px;
+      :last-of-type{
+          margin-right: none;
+      }
+      
+      
     }
  
 }
@@ -503,6 +521,11 @@ $c_renkli_baslik: #FA5652;
         &__images{
             margin-top: -70px;
         }
+    }
+
+    .footer-wrap{
+        display: flex;
+        justify-content: space-between;
     }
 
  }
